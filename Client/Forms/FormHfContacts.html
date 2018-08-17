@@ -1,0 +1,26 @@
+
+
+<h3>لیست مشتریان در فرمت حسابفا</h3>
+<div id="grdPerson"></div>
+<script>
+    $(document).ready(function(){
+
+        $('#grdPerson').kendoGrid({
+
+            dataSource:{
+                transport:{
+                    read:{
+                        url:'../Server/Api/Values.php',
+                        dataType: 'json'
+                    }
+                },
+                batch: true,
+                pageSize: 10
+            },
+            pageable: true
+
+        });
+
+    });
+
+</script>
