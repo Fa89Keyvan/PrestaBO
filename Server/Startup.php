@@ -22,7 +22,12 @@ function __autoload($classname) {
     else if($classname == 'Tools'){
         require_once('../Tools/Tools.php');
     }
-
+    else if(strpos($filename,'DTO')>1){
+        if(file_exists('../DTO/'.$filename))
+            require_once('../DTO/'.$filename);
+        else
+            require_once($filename);
+    }
 }
 
 
