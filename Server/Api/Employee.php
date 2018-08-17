@@ -5,13 +5,10 @@ $employeeStore = new EmployeeStore();
 
 if($q != null){
 
-    if($q == 'login')
+    switch($q)
     {
-        Login($employeeStore);
-    }
-    else
-    {
-        http_response_code(400);
+        case 'login': Login($employeeStore); break;
+        default: http_response_code(400);
     }
 }
 else{
