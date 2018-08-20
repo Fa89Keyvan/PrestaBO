@@ -8,8 +8,35 @@
  */
 class EmployeeTokenDTO extends BaseResponseDTO
 {
+    function __construct()
+    {
+        $this->urls = array();
+    }
+
+    /**
+     * @var string
+     */
     public $FirstName;
+
+    /**
+     * @var string
+     */
     public $LastName;
+
+    /**
+     * @var string
+     */
     public $Email;
+
+    /**
+     * @var string
+     */
     public $Token;
+
+    /**
+     * @var EmployeeAccessUrlModel[]
+     */
+    public $urls;
+
+
 }

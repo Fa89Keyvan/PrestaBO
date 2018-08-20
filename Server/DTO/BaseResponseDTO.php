@@ -19,5 +19,5 @@ class BaseResponseDTO
     public $ErrorCode;
 
 
-    const ERROR_USER_NOT_FOUND = -1;
+    const ERROR_USER_NOT_FOUND = 403;
 }
