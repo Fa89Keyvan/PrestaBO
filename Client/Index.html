@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,84 +9,39 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
-
-    <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap Core CSS RTL-->
     <link href="css/bootstrap-rtl.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link href="css/sb-admin.css" rel="stylesheet">
     <link href="css/sb-admin-rtl.css" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
     <link href="css/plugins/morris.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
     <link href="Kendo/styles/kendo.common.min.css" rel="stylesheet">
-    <link href="Kendo/styles/kendo.default.min.css" rel="stylesheet"/>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
+    <link href="Kendo/styles/kendo.default.min.css" rel="stylesheet" />
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
-    <!--Kendo-->
-    <script  src="Kendo/js/kendo.all.min.js"></script>
+    <script src="Kendo/js/kendo.all.min.js"></script>
 
 </head>
 
 <body>
 
-<div id="wrapper">
+    <div id="wrapper">
 
-    <span id="plcSideBar"></span>
+        <span id="plcSideBar"></span>
 
-    <div id="page-wrapper">
-        <div class="panel panel-primary">
-            <div class="panel-heading" id="plcTitle"></div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-sm-12" id="plcBody"></div>
+        <div id="page-wrapper">
+            <div class="panel panel-primary">
+                <div class="panel-heading" id="plcTitle"></div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12" id="plcBody"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-</div>
-<script>
-    $(document).ready(function(){
-
-        $('#plcSideBar').load('SideBar.html');
-        var lastPage = window.localStorage.getItem('lastPage');
-        if(lastPage === '' || lastPage === undefined)
-            loadPage('Dashboard.html')
-        else
-            loadPage(lastPage);
-
-    });
-
-
-    /**
-     *
-     * @param String pageName
-     */
-    function loadPage(pageName){
-        window.localStorage.setItem('lastPage',pageName);
-        $('#plcBody').load(pageName);
-    }
-</script>
+    <script src="js/app.js"></script>
 </body>
 </html>

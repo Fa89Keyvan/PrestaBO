@@ -1,16 +1,14 @@
 
-
-<h3>لیست مشتریان در فرمت حسابفا</h3>
 <div id="grdPerson"></div>
 <script>
     $(document).ready(function(){
-
+        setPanelHeading('لیست مشتریان در فرمت حسابفا');
         $('#grdPerson').kendoGrid({
 
             dataSource:{
                 transport:{
                     read:{
-                        url:'../Server/Api/Values.php',
+                        url:'',
                         dataType: 'json'
                     }
                 },

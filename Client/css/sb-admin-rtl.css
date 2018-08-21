@@ -1,9 +1,23 @@
 
+
+@font-face {
+    font-family: 'Yekan';
+    src: url('/fonts/yekan.ttf') format('truetype'),
+         url('/fonts/yekan.otf') format('woff');
+}
+
 @media (min-width: 768px){
-  #wrapper {padding-right: 225px; padding-left: 0;}
+  #wrapper {padding-right: 180px; padding-left: 0; padding-top:5px;}
   .side-nav{right: 0;left: auto;}
 }
 .dropdown{
   position: absolute;
   right:-35px;
+}
+
+*{
+    font-family: 'Yekan', Tahoma;
+}
+div#plcTitle {
+    font-size: 10pt;
 }
