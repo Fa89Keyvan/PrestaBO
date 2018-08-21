@@ -1,11 +1,12 @@
 ﻿var baseUrl = 'http://localhost/PrestaBO/Server/Api/';
+var KEY_TOKEN = 'token';
 
 $(document).ready(function () {
 
-    $('#plcSideBar').load('SideBar.html');
-
-    toLastPage();
-    
+    if (checkLogin()) {
+        $('#plcSideBar').load('SideBar.html');
+        toLastPage();
+    }
 });
 
 $(document).on('click', 'a', function () {
@@ -17,7 +18,11 @@ $(document).on('click', 'a', function () {
 
 });
 
+/**
+ * 
+ */
 function toLastPage() {
+
     var lastPage = window.localStorage.getItem('lastPage');
     if (lastPage === '' || lastPage === undefined)
         loadPage('Dashboard.html')
@@ -44,4 +49,16 @@ function setPanelHeading(headingText) {
 
     $('.panel-heading').text(headingText);
 
+}
+
+/**
+ * @returns boolean
+ */
+function checkLogin() {
+
+    var token = window.localStorage.getItem(KEY_TOKEN);
+    if (token === undefined || token === null || token === '')
+        window.location = 'login.html';
+    else
+        return true;
 }

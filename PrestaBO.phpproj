@@ -2645,4 +2645,10 @@
     <Folder Include="Server\Tools" />
     <Folder Include="Server" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Client\fonts\yekan.otf" />
+    <Content Include="Client\fonts\yekan.ttf" />
+    <Content Include="Client\js\app.js" />
+    <Content Include="Client\js\jquery-3.3.1.min.js" />
+  </ItemGroup>
 </Project>
