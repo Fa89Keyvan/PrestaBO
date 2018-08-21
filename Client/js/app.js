@@ -1,4 +1,4 @@
-﻿var baseUrl = 'http://localhost/PrestaBO/Server/Api/';
+﻿var baseUrl = '../Server/Api/';
 var KEY_TOKEN = 'token';
 
 $(document).ready(function () {
