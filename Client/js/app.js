@@ -19,6 +19,14 @@ $(document).on('click', 'a', function () {
 
 });
 
+$(document).on('click', '#btnLogout', function () {
+
+    window.localStorage.setItem(KEY_TOKEN, undefined);
+    window.localStorage.clear();
+    window.location = 'login.html';
+
+});
+
 /**
  * 
  */
