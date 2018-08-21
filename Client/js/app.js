@@ -3,10 +3,11 @@ var KEY_TOKEN = 'token';
 
 $(document).ready(function () {
 
-    if (checkLogin()) {
-        $('#plcSideBar').load('SideBar.html');
-        toLastPage();
-    }
+    checkLogin()
+
+    $('#plcSideBar').load('SideBar.html');
+    toLastPage();
+    
 });
 
 $(document).on('click', 'a', function () {
