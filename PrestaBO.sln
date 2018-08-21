@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "PrestaBO", "PrestaBO.phpproj", "{2B661020-6A99-4BE0-9BD5-18A7394F29D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B661020-6A99-4BE0-9BD5-18A7394F29D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B661020-6A99-4BE0-9BD5-18A7394F29D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {923C21BD-B7D6-48CB-8A45-8E46CEE061A5}
+	EndGlobalSection
+EndGlobal
