@@ -1,6 +1,6 @@
 <?php
 
-class HfContact
+class HfContactModel
 {
     public $ID; //int
     public $Code; //String

@@ -33,3 +33,6 @@ CREATE TABLE IF NOT EXISTS `bo_url` (
   `menu` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id_url`)
 ) DEFAULT CHARSET=latin1;
+
+
+  CREATE TABLE IF NOT EXISTS bo_hf_contacts(id_customer int not null,hf_code int not null);

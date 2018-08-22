@@ -1,5 +1,9 @@
 
-<div id="grdPerson"></div>
+
+<div class="k-rtl">
+    <div id="grdPerson"></div>
+</div>
+
 <script>
     $(document).ready(function(){
         setPanelHeading('لیست مشتریان در فرمت حسابفا');
@@ -8,14 +12,39 @@
             dataSource:{
                 transport:{
                     read:{
-                        url:'',
-                        dataType: 'json'
+                        url:'../../PrestaBO/Server/Api/HfContact.php',
+                        dataType: 'json',
+                        data:{q:'getAll'},
+                        method: 'POST'
                     }
                 },
                 batch: true,
                 pageSize: 10
             },
-            pageable: true
+            pageable: true,
+            groupable:true,
+            sortable:true,
+            filterable:true,
+            columns:[
+                {field: 'ID',title:'ش'},
+                {field: 'Code',title:'ح.س'},
+                {
+                    field: 'Code',
+                    title:'ح.س',
+                    template:function(dataRow)
+                    {
+                        return dataRow.Code === -1 ? '<i class="fa fa-times-circle text-danger"></i>':'<i class="fa fa-check-circle text-success"></i>';
+                    },
+                    groupable:false,
+                    filterable:false
+                },
+                {field:'FirstName',title:'نام'},
+                {field:'LastName',title:'نام خانوادگی'},
+                {field:'Mobile',title:'مبایل'},
+                {field:'City',title:'شهر'},
+                {field:'State',title:'استان'}
+                
+            ],
 
         });
 
