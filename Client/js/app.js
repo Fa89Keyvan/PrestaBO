@@ -5,9 +5,13 @@ $(document).ready(function () {
 
     checkLogin()
 
-    $('#plcSideBar').load('SideBar.html');
+    $('#plcSideBar').load('SideBar.html', function () {
+        var token = getLocalToken();
+        var fullName = token.FirstName + ' ' + token.LastName;
+        document.getElementById('lblFullName').innerText = fullName;
+    });
     toLastPage();
-    
+
 });
 
 $(document).on('click', 'a', function () {
@@ -33,7 +37,7 @@ $(document).on('click', '#btnLogout', function () {
 function toLastPage() {
 
     var lastPage = window.localStorage.getItem('lastPage');
-    if (lastPage === '' || lastPage === undefined)
+    if (isNullOrEmpty(lastPage))
         loadPage('Dashboard.html')
     else
         loadPage(lastPage);
@@ -47,7 +51,7 @@ function loadPage(pageName) {
     $('.panel').fadeToggle(750);
     window.localStorage.setItem('lastPage', pageName);
     $('#plcBody').load(pageName);
-    $('.panel').fadeToggle(750).stop(false,true);
+    $('.panel').fadeToggle(750).stop(false, true);
 }
 
 /**
@@ -65,9 +69,38 @@ function setPanelHeading(headingText) {
  */
 function checkLogin() {
 
-    var token = window.localStorage.getItem(KEY_TOKEN);
-    if (token === undefined || token === null || token === '')
+    var token = getLocalToken();
+    if (isNullOrEmpty(token))
         window.location = 'login.html';
-    else
+    else {
         return true;
+    }
+
+}
+
+/**
+ * @returns boolean
+ * @param {any} str
+ */
+function isNullOrEmpty(str) {
+
+    return (str === 'null' || str === '' || str === undefined || str === null);
+
+}
+
+/**
+ * @returns TokenObject
+ */
+function getLocalToken() {
+
+    return JSON.parse(window.localStorage.getItem(KEY_TOKEN));
+
+}
+
+/**
+ * @returns void
+ * @param string jsonString
+ */
+function setLocalToken(jsonString) {
+    window.localStorage.setItem(KEY_TOKEN, jsonString);
 }

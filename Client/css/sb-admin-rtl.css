@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: 'Yekan';
-    src: url('/fonts/yekan.ttf') format('truetype'),
-         url('/fonts/yekan.otf') format('woff');
+    src: url('/PrestaBo/Client/fonts/yekan.ttf') format('truetype'),
+         url('/PrestaBo/Client/fonts/yekan.otf') format('woff');
 }
 
 @media (min-width: 768px){

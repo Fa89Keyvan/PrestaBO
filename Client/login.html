@@ -72,7 +72,6 @@
             top: 0;
             width: 100%; /* Full width */
             height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
             background-color: rgb(0,0,0); /* Fallback color */
             background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
         }
@@ -169,10 +168,14 @@
                 data: frmLogin.serialize(),
                 success: function (data) {
                     var tokenData = JSON.parse(data);
-                    if (tokenData.$HasError)
+                    //alert(data);
+                    if (tokenData.HasError) {
+                        localStorage.clear();
+                        //TODO: showMessage(wrong login);
                         return;
+                    }
                     else {
-                        window.localStorage.setItem('token', tokenData);
+                        setLocalToken(data);
                         window.location = 'index.html';
                     }
                 }
@@ -181,6 +184,30 @@
                 
         });
 
+        /**
+         * @returns TokenObject
+         */
+        function getLocalToken() {
+
+            return JSON.parse(window.localStorage.getItem('token'));
+
+        }
+
+        /**
+         * @returns void
+         * @param string jsonString
+         */
+        function setLocalToken(jsonString) {
+            window.localStorage.setItem('token', jsonString);
+        }
+
+        /**
+         * @returns void
+         */
+        function removeLocalToken() {
+            window.localStorage.setItem('token', undefined);
+            window.localStorage.clear();
+        }
     </script>
 
 </body>
