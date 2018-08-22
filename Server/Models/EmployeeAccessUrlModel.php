@@ -9,12 +9,17 @@ class EmployeeAccessUrlModel
     public $id_employee;
 
     /**
-     * @var text
+     * @var string
      */
     public $url;
 
     /**
-     * @var text
+     * @var string
      */
     public $text;
+
+	/**
+	 * @var string
+	 */
+	public $menu;
 }

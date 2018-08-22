@@ -24,4 +24,9 @@ class EmployeeAccessModel
      */
     public $id_url;
 
+	/**
+	 * @var string
+	 */
+	public $menu;
+
 }

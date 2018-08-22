@@ -6,9 +6,15 @@ $(document).ready(function () {
     checkLogin()
 
     $('#plcSideBar').load('SideBar.html', function () {
+
+        //show user fullname
         var token = getLocalToken();
         var fullName = token.FirstName + ' ' + token.LastName;
         document.getElementById('lblFullName').innerText = fullName;
+        
+        buildSideBar(token);
+
+
     });
     toLastPage();
 
@@ -30,6 +36,7 @@ $(document).on('click', '#btnLogout', function () {
     window.location = 'login.html';
 
 });
+
 
 /**
  * 
@@ -103,4 +110,45 @@ function getLocalToken() {
  */
 function setLocalToken(jsonString) {
     window.localStorage.setItem(KEY_TOKEN, jsonString);
+}
+
+/**
+ * 
+ * @param Token token
+ */
+function buildSideBar(token) {
+    var urls = token.urls;
+    var menus = Array();
+
+    for (var i = 0; i < urls.length; i++) {
+        if (urls[i].menu === null)
+            urls[i].menu = 'other';
+        if (menus.indexOf(urls[i].menu) < 0)
+            menus.push(urls[i].menu);
+    }
+
+    var html = '';
+    for (var i = 0; i < menus.length; i++) {
+
+        var menu = menus[i];
+        html += '<li>';
+        html += '<a href="#" data-toggle="collapse" data-target="#m' + i + '">';
+        html += '<span>' + menu + '</span><i class="fa fa-fw fa-caret-down"></i>';
+        html += '</a>';
+        html += '<ul id="m' + i + '" class="collapse">';
+
+        for (var j = 0; j < urls.length; j++) {
+            var url = urls[j];
+            if (url.menu === menu) {
+                html += '<li>';
+                html += '<a href="#" data-url="Forms/' + url.url + '.html">' + url.text + '</a>';
+                html += '</li>';
+            }
+
+        }
+
+        html += '</ul>'
+        html += '</li>';
+    }
+    $('#sideNav').html(html);
 }

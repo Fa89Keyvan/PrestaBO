@@ -14,7 +14,7 @@ class EmployeeAccessStore
 
 
     const SELECT_EMPLOYEE_ACCESS_URL =
-        'SELECT a.id_employee,u.url,u.text
+        'SELECT a.id_employee,u.url,u.text,u.menu
             FROM 	 bo_employee_access   a
             JOIN     bo_url				  u
             ON		 a.id_url = u.id_url

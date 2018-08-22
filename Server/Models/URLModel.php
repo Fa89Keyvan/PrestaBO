@@ -23,4 +23,10 @@ class URLModel
      */
     public $text;
 
+	/**
+	 * 
+	 * @var string
+	 */
+	public $menu;
+
 }
