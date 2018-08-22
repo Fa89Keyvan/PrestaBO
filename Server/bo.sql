@@ -34,5 +34,9 @@ CREATE TABLE IF NOT EXISTS `bo_url` (
   PRIMARY KEY (`id_url`)
 ) DEFAULT CHARSET=latin1;
 
+GO
 
-  CREATE TABLE IF NOT EXISTS bo_hf_contacts(id_customer int not null,hf_code int not null);
+
+--bo_hf_contacts
+--=============================================
+CREATE TABLE IF NOT EXISTS bo_hf_contacts(id_customer int not null,hf_code int not null);

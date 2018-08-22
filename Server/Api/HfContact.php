@@ -6,7 +6,18 @@
  * Time: 4:59 PM
  */
 
-$q = GetPostedValue('q');
+$q     = GetPostedValue('q');
+$token = GetPostedValue('token');
+
+if(Tools::IsNullOrEmpty($token)){
+    http_response_code(403);
+    die();
+}
+$employeeStore = new EmployeeStore();
+if(!$employeeStore->ValidateToken($token)){
+    http_response_code(403);
+    die();
+}
 
 if($q != null){
     $hfContactStore = new HfContactsStore();

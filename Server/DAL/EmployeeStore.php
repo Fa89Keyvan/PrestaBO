@@ -9,7 +9,7 @@ class EmployeeStore
 	      where e.email  = ?
 	      and   e.passwd = ?';
 
-    const SELECT_TOKEN = 'SELECT * FROM bo_tokens t WHERE t.id_employee = ?';
+    const SELECT_TOKEN = 'SELECT * FROM bo_tokens t ';
     const INSERT_TOKEN = 'INSERT INTO bo_tokens(id_employee,token,created_date) VALUES(?,?,?)';
     const UPDATE_TOKEN = 'UPDATE bo_tokens SET token = ?,created_date = ? WHERE id_employee = ?';
 
@@ -57,7 +57,7 @@ class EmployeeStore
      */
     public function GetToken($id_employee){
 
-        $token = $this->_findToken($id_employee);
+        $token = $this->_findToken_by_employeeId($id_employee);
 
         $nowDate         = Tools::GetLocalDateTime();
         $nowDateInString = Tools::DateToString($nowDate);
@@ -85,6 +85,36 @@ class EmployeeStore
         return $token;
     }
 
+    /**
+     * @param $token string
+     * @return bool;
+     * @throws $exception
+     */
+    public function ValidateToken($token){
+        try{
+
+            $nowDate         = Tools::GetLocalDateTime();
+            $nowDateInString = Tools::DateToString($nowDate);
+
+            $token = $this->_findToken_by_token($token);
+            if($token === null){
+
+                return false;
+            }
+            $tokenIntervalInSeconds = Tools::DiffInSeconds($nowDate,Tools::StringToDateTime($token->created_date));
+            //echo $tokenIntervalInSeconds;
+            if($tokenIntervalInSeconds>1200)
+                return false;
+
+            $token->created_date = $nowDateInString;
+            $this->_updateToken($token);
+            return true;
+
+        }
+        catch (Exception $exception){
+            throw $exception;
+        }
+    }
 
     /**
      * @param $token TokenModel
@@ -107,16 +137,34 @@ class EmployeeStore
      * @param $id_employee int
      * @return null|TokenModel
      */
-    private function _findToken($id_employee){
+    private function _findToken_by_employeeId($id_employee){
 
-        $query  = $this->db->prepare(self::SELECT_TOKEN);
+        $sql = self::SELECT_TOKEN.' where t.id_employee=? ';
+        //echo $sql;
+        $query  = $this->db->prepare($sql);
         $query->bind_param('i',$id_employee);
         $query->execute();
 
         $result = $query->get_result() or die('error at line '.__LINE__);
-        if($result->num_rows > 1) return null;
 
-        return $result->fetch_object();
+        return $result->fetch_object('TokenModel');
+    }
+
+    /**
+     * @param $token string
+     * @return null|TokenModel
+     */
+    private function _findToken_by_token($token){
+
+        $sql = self::SELECT_TOKEN.' where t.token=? ';
+        //echo $token;
+        $query  = $this->db->prepare($sql);
+        $query->bind_param('s',$token);
+        $query->execute();
+
+        $result = $query->get_result();
+
+        return $result->fetch_object('TokenModel');
     }
 
     /**

@@ -14,7 +14,7 @@
                     read:{
                         url:'../../PrestaBO/Server/Api/HfContact.php',
                         dataType: 'json',
-                        data:{q:'getAll'},
+                        data:{q:'getAll',token:getLocalToken().Token},
                         method: 'POST'
                     }
                 },

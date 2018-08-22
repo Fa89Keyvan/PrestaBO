@@ -60,4 +60,12 @@ class Tools
     public static function ToJson($obj){
         return json_encode($obj,JSON_UNESCAPED_UNICODE);
     }
+
+    /**
+     * @param $str string
+     * @return bool
+     */
+    public static function IsNullOrEmpty($str){
+        return ($str === null || $str === '');
+    }
 }

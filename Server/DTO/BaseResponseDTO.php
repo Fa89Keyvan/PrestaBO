@@ -19,5 +19,15 @@ class BaseResponseDTO
     public $ErrorCode;
 
 
+    /**
+     * @return BaseResponseDTO
+     */
+    public static function UserNotFound(){
+        $res = new BaseResponseDTO();
+        $res->HasError = true;
+        $res->ErrorCode = BaseResponseDTO::ERROR_USER_NOT_FOUND;
+        return $res;
+    }
+
     const ERROR_USER_NOT_FOUND = 403;
 }

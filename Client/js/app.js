@@ -20,6 +20,12 @@ $(document).ready(function () {
 
 });
 
+$(document).ajaxComplete(function (event, xhr, settings) {
+    //alert(xhr.status);
+    //if(xhr.status == 403)
+        //logOut();
+});
+
 $(document).on('click', 'a', function () {
 
     var pageName = $(this).attr('data-url');
@@ -30,13 +36,17 @@ $(document).on('click', 'a', function () {
 });
 
 $(document).on('click', '#btnLogout', function () {
+    logOut();
+});
 
+/**
+ * logout
+ */
+function logOut(){
     window.localStorage.setItem(KEY_TOKEN, undefined);
     window.localStorage.clear();
     window.location = 'login.html';
-
-});
-
+}
 
 /**
  * 
@@ -45,7 +55,7 @@ function toLastPage() {
 
     var lastPage = window.localStorage.getItem('lastPage');
     if (isNullOrEmpty(lastPage))
-        loadPage('Dashboard.html')
+        loadPage('Forms/Dashboard.html')
     else
         loadPage(lastPage);
 }
