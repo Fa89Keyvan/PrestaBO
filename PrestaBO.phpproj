@@ -2575,7 +2575,9 @@
     <Compile Include="Client\Forms\Dashboard.html" />
     <Compile Include="Client\Index.html" />
     <Compile Include="Client\SideBar.html" />
-    <Compile Include="Server\Api\Employee.php" />
+    <Compile Include="Server\Api\Api.php" />
+    <Compile Include="Server\Api\EmployeeApi.php" />
+    <Compile Include="Server\Api\HfContactApi.php" />
     <Compile Include="Server\DAL\BaseStore.php" />
     <Compile Include="Server\DAL\EmployeeAccessStore.php" />
     <Compile Include="Server\DAL\EmployeeStore.php" />

@@ -22,4 +22,9 @@ class EmployeeAccessUrlModel
 	 * @var string
 	 */
 	public $menu;
+
+    /**
+     * @var int
+     */
+    public $api;
 }

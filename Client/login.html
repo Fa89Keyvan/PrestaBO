@@ -133,7 +133,7 @@
 
     <div id="id01" class="modal">
 
-        <form class="modal-content animate" id="frmLogin" action="../Server/Api/Employee.php">
+        <form class="modal-content animate" id="frmLogin" action="../Server/Api/Api.php?q=login" method="post">
             <div class="imgcontainer">
                 <img src="images/login.png" alt="Avatar" class="avatar">
             </div>
@@ -144,7 +144,7 @@
 
                 <label for="password"><b>کلمه عبور</b></label>
                 <input type="password" placeholder="کلمه عبور" name="password" required>
-                <input type="hidden" name="q" value="login" />
+
                 <button type="submit">ورود</button>
             </div>
 

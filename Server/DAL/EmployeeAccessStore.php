@@ -14,11 +14,12 @@ class EmployeeAccessStore
 
 
     const SELECT_EMPLOYEE_ACCESS_URL =
-        'SELECT a.id_employee,u.url,u.text,u.menu
+        'SELECT a.id_employee,u.url,u.text,u.menu,u.api
             FROM 	 bo_employee_access   a
             JOIN     bo_url				  u
             ON		 a.id_url = u.id_url
-            WHERE    a.id_employee = ?';
+            WHERE    a.id_employee = ?
+            AND      u.api = ?';
 
     const INSERT_EMPLOYEE_ACCESS = 'INSERT INTO bo_employee_access(id_employee,id_url) values(?,?)';
 
@@ -111,16 +112,17 @@ class EmployeeAccessStore
 
     /**
      * @param $employeeId int
+     * @param $api int = 0
      * @return EmployeeAccessUrlModel[]
      * @throws Exception
      */
-    public function SelectEmployeeUrls($employeeId){
+    public function SelectEmployeeUrls($employeeId,$api = 0){
 
         try{
 
             $lstEmployeeUrls = array();
             $query = $this->db->prepare(self::SELECT_EMPLOYEE_ACCESS_URL);
-            $query->bind_param('i',$employeeId);
+            $query->bind_param('ii',$employeeId,$api);
             $query->execute();
             $result = $query->get_result();
 

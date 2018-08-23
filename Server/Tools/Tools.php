@@ -54,7 +54,7 @@ class Tools
     }
 
     /**
-     * @param $obj object
+     * @param $obj object|object[]
      * @return string
      */
     public static function ToJson($obj){

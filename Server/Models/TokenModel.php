@@ -19,7 +19,7 @@ class TokenModel
     public $token;
 
     /**
-     * @var DateTime
+     * @var string
      */
     public $created_date;
 

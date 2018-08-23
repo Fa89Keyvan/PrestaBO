@@ -86,8 +86,9 @@ class EmployeeStore
     }
 
     /**
+     * return -1 if invalid token otherwise return employee_id
      * @param $token string
-     * @return bool;
+     * @return int
      * @throws $exception
      */
     public function ValidateToken($token){
@@ -99,16 +100,16 @@ class EmployeeStore
             $token = $this->_findToken_by_token($token);
             if($token === null){
 
-                return false;
+                return -1;
             }
             $tokenIntervalInSeconds = Tools::DiffInSeconds($nowDate,Tools::StringToDateTime($token->created_date));
             //echo $tokenIntervalInSeconds;
             if($tokenIntervalInSeconds>1200)
-                return false;
+                return -1;
 
             $token->created_date = $nowDateInString;
             $this->_updateToken($token);
-            return true;
+            return $token->id_employee;
 
         }
         catch (Exception $exception){

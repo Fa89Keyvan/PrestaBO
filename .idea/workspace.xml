@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5689ff9b-6418-46cb-9506-83fc7657ee94" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/Forms/HfContacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Forms/HfContacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/PrestaBO/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/PrestaBO/v15/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrestaBO.phpproj" beforeDir="false" afterPath="$PROJECT_DIR$/PrestaBO.phpproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Api/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Api/Employee.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/Api/HfContact.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Api/HfContact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/DAL/EmployeeStore.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/DAL/EmployeeStore.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/DTO/BaseResponseDTO.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/DTO/BaseResponseDTO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Tools/Tools.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Tools/Tools.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/bo.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Server/bo.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Startup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Startup.php" afterDir="false" />
     </list>
     <ignored path="PrestaBO.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,47 +31,48 @@
           <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
           <entry key="htaccess" value="2" />
-          <entry key="html" value="3" />
-          <entry key="js" value="3" />
-          <entry key="php" value="22" />
+          <entry key="html" value="8" />
+          <entry key="js" value="4" />
+          <entry key="php" value="23" />
           <entry key="sql" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="HTML" value="3" />
-          <entry key="JavaScript" value="3" />
-          <entry key="PHP" value="22" />
+          <entry key="HTML" value="8" />
+          <entry key="JavaScript" value="4" />
+          <entry key="PHP" value="23" />
           <entry key="SQL" value="1" />
           <entry key="htaccess" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="668" />
-          <entry key="js" value="280" />
-          <entry key="php" value="1352" />
+          <entry key="html" value="683" />
+          <entry key="js" value="281" />
+          <entry key="php" value="1450" />
           <entry key="sql" value="72" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="668" />
-          <entry key="JavaScript" value="280" />
-          <entry key="PHP" value="1352" />
+          <entry key="HTML" value="683" />
+          <entry key="JavaScript" value="281" />
+          <entry key="PHP" value="1450" />
           <entry key="SQL" value="72" />
         </counts>
       </usages-collector>
@@ -84,31 +84,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/Api/HfContact.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/Tools/Tools.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="68" column="44" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
-              <folding>
-                <element signature="e#1459#1516#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Client/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="136">
+              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
               <folding>
                 <element signature="e#88#432#0" />
                 <element signature="n#!!doc;n#logOut#0" />
@@ -122,45 +101,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Client/Forms/HfContacts.html">
+        <entry file="file://$PROJECT_DIR$/Client/Index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            <state relative-caret-position="17">
+              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Server/DAL/EmployeeStore.php">
+        <entry file="file://$PROJECT_DIR$/Client/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="104" column="14" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
+            <state relative-caret-position="187">
+              <caret line="135" column="100" selection-start-line="135" selection-start-column="100" selection-end-line="135" selection-end-column="100" />
               <folding>
-                <element signature="n#__construct#0;n#EmployeeStore#0;n#!!top" />
-                <element signature="n#GetEmployee#0;n#EmployeeStore#0;n#!!top" />
-                <element signature="n#_insertToken#0;n#EmployeeStore#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/Api/Employee.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/DTO/BaseResponseDTO.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-              <folding>
-                <element signature="e#232#274#0#PHP" />
-                <element signature="n#UserNotFound#0;n#BaseResponseDTO#0;n#!!top" />
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -200,7 +155,6 @@
         <option value="$PROJECT_DIR$/Server/Models/TokenModel.php" />
         <option value="$PROJECT_DIR$/Test.php" />
         <option value="$PROJECT_DIR$/Server/Test.php" />
-        <option value="$PROJECT_DIR$/Server/Startup.php" />
         <option value="$PROJECT_DIR$/Server/DTO/BaseResponse.php" />
         <option value="$PROJECT_DIR$/Server/Models/URLs.php" />
         <option value="$PROJECT_DIR$/Server/Models/EmployeeAccessModel.php" />
@@ -208,7 +162,6 @@
         <option value="$PROJECT_DIR$/Server/DAL/URLStore.php" />
         <option value="$PROJECT_DIR$/Server/Models/EmployeeAccessUrlModel.php" />
         <option value="$PROJECT_DIR$/Server/DAL/EmployeeAccessStore.php" />
-        <option value="$PROJECT_DIR$/Server/Api/Employee.php" />
         <option value="$PROJECT_DIR$/Server/DTO/EmployeeTokenDTO.php" />
         <option value="$PROJECT_DIR$/Server/Api/HfContavt.php" />
         <option value="$PROJECT_DIR$/Client/Index.html" />
@@ -218,9 +171,12 @@
         <option value="$PROJECT_DIR$/Server/DTO/BaseResponseDTO.php" />
         <option value="$PROJECT_DIR$/Client/Forms/HfContacts.html" />
         <option value="$PROJECT_DIR$/Server/Tools/Tools.php" />
-        <option value="$PROJECT_DIR$/Client/js/app.js" />
-        <option value="$PROJECT_DIR$/Server/Api/HfContact.php" />
         <option value="$PROJECT_DIR$/Server/DAL/EmployeeStore.php" />
+        <option value="$PROJECT_DIR$/Server/Startup.php" />
+        <option value="$PROJECT_DIR$/Server/Api/Employee.php" />
+        <option value="$PROJECT_DIR$/Server/Api/HfContact.php" />
+        <option value="$PROJECT_DIR$/Client/js/app.js" />
+        <option value="$PROJECT_DIR$/Client/login.html" />
       </list>
     </option>
   </component>
@@ -239,28 +195,6 @@
     <option name="y" value="31" />
     <option name="width" value="1378" />
     <option name="height" value="743" />
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>Code StylePHP</id>
-          </State>
-          <State>
-            <id>PHP</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>PhpUnnecessaryFullyQualifiedNameInspection</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -281,13 +215,13 @@
             <path>
               <item name="PrestaBO" type="b2602c69:ProjectViewProjectNode" />
               <item name="PrestaBO" type="462c0819:PsiDirectoryNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PrestaBO" type="b2602c69:ProjectViewProjectNode" />
               <item name="PrestaBO" type="462c0819:PsiDirectoryNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="DAL" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -298,8 +232,8 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../php/php.exe" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -359,17 +293,18 @@
       <workItem from="1534962569114" duration="1146000" />
       <workItem from="1534963879450" duration="1164000" />
       <workItem from="1534965124501" duration="1141000" />
+      <workItem from="1534992876569" duration="1073000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11051000" />
+    <option name="totallyTimeSpent" value="12124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="31" width="1378" height="743" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2663126" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27010623" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -493,13 +428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/Index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Server/DAL/HfContactsStore.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -524,13 +452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/Startup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Server/DTO/EmployeeTokenDTO.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -552,42 +473,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Server/Startup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/Api/HfContact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Server/Tools/Tools.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
+        <state relative-caret-position="525">
           <caret line="68" column="44" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
           <folding>
             <element signature="e#1459#1516#0#PHP" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#88#432#0" />
-            <element signature="n#!!doc;n#logOut#0" />
-            <element signature="n#!!block;n#logOut#0" />
-            <element signature="n#!!doc;n#loadPage#0" />
-            <element signature="n#!!block;n#loadPage#0" />
-            <element signature="n#!!block;n#buildSideBar#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/Forms/HfContacts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/Api/Employee.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -602,21 +508,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/Api/HfContact.php">
+    <entry file="file://$PROJECT_DIR$/Server/Api/Employee.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#327#430#0#PHP" />
+            <element signature="n#Login#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/DAL/EmployeeStore.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
+        <state relative-caret-position="1292">
           <caret line="104" column="14" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
           <folding>
             <element signature="n#__construct#0;n#EmployeeStore#0;n#!!top" />
             <element signature="n#GetEmployee#0;n#EmployeeStore#0;n#!!top" />
             <element signature="n#_insertToken#0;n#EmployeeStore#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/Forms/Dashboard.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/Forms/HfContacts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="68" lean-forward="true" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding>
+            <element signature="e#88#432#0" />
+            <element signature="n#!!doc;n#logOut#0" />
+            <element signature="n#!!block;n#logOut#0" />
+            <element signature="n#!!doc;n#loadPage#0" />
+            <element signature="n#!!block;n#loadPage#0" />
+            <element signature="n#!!block;n#buildSideBar#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="135" column="100" selection-start-line="135" selection-start-column="100" selection-end-line="135" selection-end-column="100" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>

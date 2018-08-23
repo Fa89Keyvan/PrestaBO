@@ -28,12 +28,18 @@ function __autoload($classname) {
         else
             require_once($filename);
     }
+    else if(strpos($filename,'Api')>1){
+        if(file_exists('../Api/'.$filename))
+            require_once('../Api/'.$filename);
+        else
+            require_once($filename);
+    }
 }
 
 
 /**
  * @param $key string
- * @return string
+ * @return null|string
  */
 function GetPostedValue($key){
 
@@ -42,4 +48,15 @@ function GetPostedValue($key){
 
     return null;
 
+}
+
+/**
+ * @param $key string
+ * @return null|string
+ */
+function GetQueryValue($key){
+    if(isset($_GET[$key]))
+        return $_GET[$key];
+
+    return null;
 }

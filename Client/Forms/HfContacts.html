@@ -12,7 +12,7 @@
             dataSource:{
                 transport:{
                     read:{
-                        url:'../../PrestaBO/Server/Api/HfContact.php',
+                        url:'../../PrestaBO/Server/Api/Api.php?q=HfContacts_GetAll',
                         dataType: 'json',
                         data:{q:'getAll',token:getLocalToken().Token},
                         method: 'POST'
