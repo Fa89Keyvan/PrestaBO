@@ -59,17 +59,17 @@ class HfContactsStore
 		'0'						as Liability,
 		'0'						as Credits,
 		IFNULL(hfc.hf_code,-1)	as Code
-	FROM ".TB_PREFIX."customer C
+	FROM "._DB_PREFIX_."customer C
     LEFT JOIN
 	(
         SELECT a.id_address as id_address,a.id_customer,a.address1,a.postcode,a.city,a.phone,a.phone_mobile,s.`name`
-            FROM   ".TB_PREFIX."address a
-            JOIN   ".TB_PREFIX."state   s
+            FROM   "._DB_PREFIX_."address a
+            JOIN   "._DB_PREFIX_."state   s
             ON 		 a.id_state = s.id_state
             JOIN
             (
             SELECT MIN(id_address) as id_address,id_customer
-                        FROM  ".TB_PREFIX."address
+                        FROM  "._DB_PREFIX_."address
                         WHERE deleted = 0
                         AND   active  = 1
                         GROUP BY id_customer

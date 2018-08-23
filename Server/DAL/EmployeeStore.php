@@ -28,7 +28,7 @@ class EmployeeStore
 
         try{
 
-            $password = md5(COOKIE_KEY.$password);
+            $password = md5(_COOKIE_KEY_.$password);
 
             $query = $this->db->prepare(self::SELECT_EMPLOYEE);
 

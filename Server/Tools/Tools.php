@@ -16,8 +16,8 @@ class Tools
      */
     public static function DiffInSeconds($biggerDate,$smallerDate){
 
-        $biggerDateInString  = $biggerDate->format(DATE_TIME_FORMAT);
-        $smallerDateInString = $smallerDate->format(DATE_TIME_FORMAT);
+        $biggerDateInString  = $biggerDate->format(_DATE_TIME_FORMAT_);
+        $smallerDateInString = $smallerDate->format(_DATE_TIME_FORMAT_);
 
         //echo sprintf('<BR> bigger: %s <BR> smaller: %s <BR>',$biggerDateInString,$smallerDateInString);
 
@@ -33,7 +33,7 @@ class Tools
      */
     public static function GetLocalDateTime(){
 
-        return new DateTime('now',new DateTimeZone(TIME_ZONE));
+        return new DateTime('now',new DateTimeZone(_TIME_ZONE_));
 
     }
 
@@ -42,7 +42,7 @@ class Tools
      * @return string
      */
     public static function DateToString ($dateTime){
-        return $dateTime->format(DATE_TIME_FORMAT);
+        return $dateTime->format(_DATE_TIME_FORMAT_);
     }
 
     /**
@@ -50,7 +50,7 @@ class Tools
      * @return DateTime
      */
     public static function StringToDateTime($dateTimeInString){
-        return DateTime::createFromFormat(DATE_TIME_FORMAT,$dateTimeInString);
+        return DateTime::createFromFormat(_DATE_TIME_FORMAT_,$dateTimeInString);
     }
 
     /**

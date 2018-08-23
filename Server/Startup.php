@@ -1,13 +1,13 @@
 <?php
 
-define("DB_SERVER","localhost");
-define("DB_NAME","prestashop");
-define("DB_USER","root");
-define("DB_PASSWORD","");
-define("COOKIE_KEY","F5TQLZGKrnCR2RJoxNLXa3M6cLbpbehegAFNTTKa7QAOPdrsVLHjNVfv");
-define("TB_PREFIX","ps_");
-define("DATE_TIME_FORMAT","Y-m-d H:i:s");
-define("TIME_ZONE","Asia/Tehran");
+define("_DB_SERVER_","localhost");
+define("_DB_NAME_","prestashop");
+define("_DB_USER_","root");
+define("_DB_PASSWD_","");
+define("_COOKIE_KEY_","F5TQLZGKrnCR2RJoxNLXa3M6cLbpbehegAFNTTKa7QAOPdrsVLHjNVfv");
+define("_DB_PREFIX_","ps_");
+define("_DATE_TIME_FORMAT_","Y-m-d H:i:s");
+define("_TIME_ZONE_","Asia/Tehran");
 
 
 function __autoload($classname) {
