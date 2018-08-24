@@ -45,6 +45,17 @@ $(document).on('click', '#btnLogout', function () {
     logOut();
 });
 
+$(document).on('click', '#btnMaximize', function () {
+    $('.panel').animate({top:'0',right:'0',height:'100%'},'slow');
+    $(this).addClass('hide');
+    $('#btnRestore').removeClass('hide');
+});
+$(document).on('click', '#btnRestore', function () {
+    $('.panel').css('top', '').css('right', '').css('height','');
+    $(this).addClass('hide');
+    $('#btnMaximize').removeClass('hide');
+});
+
 /**
  * logout
  */
@@ -83,7 +94,7 @@ function loadPage(pageName) {
  */
 function setPanelHeading(headingText) {
 
-    $('.panel-heading').text(headingText);
+    $('#plcTitle').text(headingText);
 
 }
 

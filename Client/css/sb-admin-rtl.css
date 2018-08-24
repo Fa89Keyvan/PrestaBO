@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: 'Yekan';
-    src: url('/PrestaBo/Client/fonts/yekan.ttf') format('truetype'),
-         url('/PrestaBo/Client/fonts/yekan.otf') format('woff');
+    src: url('../fonts/yekan.ttf') format('truetype'),
+         url('../Client/fonts/yekan.otf') format('woff');
 }
 
 @media (min-width: 768px){
@@ -29,8 +29,20 @@ div#plcTitle {
     position: fixed;
     z-index: 1000;
     top: 0px;
-    background-image: url(/PrestaBO/Client/images/loading.gif);
+    background-image: url(../images/loading.gif);
     background-repeat: no-repeat;
     background-position: center 200px;
     display: none;
+}
+.panel {
+    position: fixed;
+    z-index:2000;
+    margin:5px 5px 0 5px;
+}
+.panel-heading{
+    min-height: 50px;
+}
+#btnRestore, #btnMaximize {
+    position: absolute;
+    left:14px;
 }
