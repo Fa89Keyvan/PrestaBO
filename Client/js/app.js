@@ -21,10 +21,16 @@ $(document).ready(function () {
 });
 
 $(document).ajaxComplete(function (event, xhr, settings) {
-    //alert(xhr.status);
-    //if(xhr.status == 403)
-        //logOut();
+    $('#loading').fadeOut('slow');
+    if (xhr.status == 403) {
+        alert(xhr.status);
+        logOut();
+    }
+    
 });
+$(document).ajaxStart(function () {
+    $('#loading').fadeIn('slow');
+})
 
 $(document).on('click', 'a', function () {
 

@@ -2573,7 +2573,7 @@
     <Compile Include="Client\Kendo\styles\kendo.uniform.mobile.min.css" />
     <Compile Include="Client\Kendo\styles\kendo.uniform.mobile.min.css.map" />
     <Compile Include="Client\Forms\Dashboard.html" />
-    <Compile Include="Client\Index.html" />
+    <Compile Include="Client\index.html" />
     <Compile Include="Client\SideBar.html" />
     <Compile Include="Server\Api\Api.php" />
     <Compile Include="Server\Api\EmployeeApi.php" />
@@ -2652,6 +2652,7 @@
   <ItemGroup>
     <Content Include="Client\fonts\yekan.otf" />
     <Content Include="Client\fonts\yekan.ttf" />
+    <Content Include="Client\images\loading.gif" />
     <Content Include="Client\images\login.png" />
     <Content Include="Client\js\app.js" />
     <Content Include="Client\js\jquery-3.3.1.min.js" />
