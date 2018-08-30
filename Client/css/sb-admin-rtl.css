@@ -46,3 +46,18 @@ div#plcTitle {
     position: absolute;
     left:14px;
 }
+td .fa {
+    font-size: 14pt;
+    margin-left: 5px;
+}
+td a .fa:hover {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    filter: blur(50%);
+    cursor: pointer;
+}
+td a .fa:active {
+    cursor: pointer;
+    -ms-zoom: 0.9;
+    zoom: 0.9;
+}

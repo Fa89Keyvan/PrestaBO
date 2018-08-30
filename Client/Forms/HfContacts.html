@@ -32,10 +32,13 @@
                 {field: 'Code',title:'ح.س'},
                 {
                     field: 'Code',
-                    title:'ح.س',
+                    title:'حسابفا',
                     template:function(dataRow)
                     {
-                        return dataRow.Code === -1 ? '<i class="fa fa-times-circle text-danger"></i>':'<i class="fa fa-check-circle text-success"></i>';
+                        var fa = (dataRow.Code === -1) ? 'fa-times-circle text-danger' : 'fa-check-circle text-primary';
+                        var template = '<i class="fa ' + fa + '"></i>';
+                        template += '<a data-Code="' + dataRow.Code + '" data-ID="' + dataRow.ID + '"><i class="fa fa-arrow-circle-up text-primary"></i></a>';
+                        return template;
                     },
                     groupable:false,
                     filterable:false
