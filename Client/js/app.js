@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     checkLogin()
 
-    $('#plcSideBar').load('SideBar.html', function () {
+    $('#plcSideBar').load('SideBar.php', function () {
 
         //show user fullname
         var token = getLocalToken();
@@ -72,7 +72,7 @@ $(document).on('click', '#btnRestore', function () {
 function logOut(){
     window.localStorage.setItem(KEY_TOKEN, undefined);
     window.localStorage.clear();
-    window.location = 'login.html';
+    window.location = 'login.php';
 }
 
 /**
@@ -82,7 +82,7 @@ function toLastPage() {
 
     var lastPage = window.localStorage.getItem('lastPage');
     if (isNullOrEmpty(lastPage))
-        loadPage('Forms/Dashboard.html')
+        loadPage('Forms/Dashboard.php')
     else
         loadPage(lastPage);
 }
@@ -115,7 +115,7 @@ function checkLogin() {
 
     var token = getLocalToken();
     if (isNullOrEmpty(token))
-        window.location = 'login.html';
+        window.location = 'login.php';
     else {
         return true;
     }
@@ -178,7 +178,7 @@ function buildSideBar(token) {
             var url = urls[j];
             if (url.menu === menu) {
                 html += '<li>';
-                html += '<a href="#" data-url="Forms/' + url.url + '.html">' + url.text + '</a>';
+                html += '<a href="#" data-url="Forms/' + url.url + '.php">' + url.text + '</a>';
                 html += '</li>';
             }
 

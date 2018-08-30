@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand pull-right" href="#" onclick="loadPage('Dashboard.html')">پرستا</a>
+        <a class="navbar-brand pull-right" href="#" onclick="loadPage('Dashboard.php')">پرستا</a>
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav pull-left">

@@ -70,7 +70,7 @@
     <Compile Include="Client\fonts\glyphicons-halflings-regular.ttf" />
     <Compile Include="Client\fonts\glyphicons-halflings-regular.woff" />
     <Compile Include="Client\fonts\glyphicons-halflings-regular.woff2" />
-    <Compile Include="Client\Forms\HfContacts.html" />
+    <Compile Include="Client\Forms\HfContacts.php" />
     <Compile Include="Client\js\plugins\flot\excanvas.min.js" />
     <Compile Include="Client\js\plugins\flot\flot-data.js" />
     <Compile Include="Client\js\plugins\flot\jquery.flot.js" />

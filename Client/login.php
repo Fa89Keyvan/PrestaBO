@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -176,7 +176,7 @@
                     }
                     else {
                         setLocalToken(data);
-                        window.location = 'index.html';
+                        window.location = 'index.php';
                     }
                 }
             });

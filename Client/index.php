@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -48,6 +48,6 @@
         </div>
     </div>
     <div id="loading"></div>
-    <script src="js/app.js"></script>
+    <script src="js/app.js?1"></script>
 </body>
 </html>
