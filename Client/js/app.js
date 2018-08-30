@@ -46,12 +46,22 @@ $(document).on('click', '#btnLogout', function () {
 });
 
 $(document).on('click', '#btnMaximize', function () {
-    $('.panel').animate({top:'0',right:'0',height:'100%'},'slow');
+    var sideNav = document.getElementById('sideNav');
+    var wrapper = document.getElementById('wrapper');
+    $(sideNav).slideToggle('slow');
+    window.localStorage.setItem('wrapperPaddingRight', $(wrapper).css('paddingRight'));
+    $(wrapper).animate({ paddingRight: '0px' },'slow');
+
     $(this).addClass('hide');
     $('#btnRestore').removeClass('hide');
 });
 $(document).on('click', '#btnRestore', function () {
-    $('.panel').css('top', '').css('right', '').css('height','');
+    var sideNav = document.getElementById('sideNav')    ;
+    var wrapper = document.getElementById('wrapper');
+    var padding = window.localStorage.getItem('wrapperPaddingRight');
+    $(sideNav).slideToggle('slow');
+    
+    $(wrapper).animate({ paddingRight: padding },'slow');
     $(this).addClass('hide');
     $('#btnMaximize').removeClass('hide');
 });

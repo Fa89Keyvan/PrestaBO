@@ -35,17 +35,16 @@ div#plcTitle {
     display: none;
 }
 .panel {
-    position: fixed;
-    z-index:2000;
-    margin:5px 5px 0 5px;
+    transition: all .5s linear;
+    margin: 5px 5px 0 5px;
 }
 .panel-heading{
     min-height: 50px;
 }
-#btnRestore, #btnMaximize {
+/*#btnRestore, #btnMaximize {
     position: absolute;
     left:14px;
-}
+}*/
 td .fa {
     font-size: 14pt;
     margin-left: 5px;
