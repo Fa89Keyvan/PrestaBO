@@ -26,6 +26,7 @@
     <script src="Kendo/js/kendo.web.min.js"></script>
 
     <script src="Kendo/js/messages/kendo.messages.fa-IR.min.js"></script>
+    <script src="js/helpers.js"></script>
 
 </head>
 

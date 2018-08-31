@@ -1,5 +1,6 @@
 ﻿var baseUrl = '../Server/Api/';
 var KEY_TOKEN = 'token';
+var apiBaseUrl = '../../PrestaBO/Server/Api/Api.php';
 
 $(document).ready(function () {
 
@@ -192,6 +193,12 @@ function buildSideBar(token) {
     $('#sideNav').html(html);
 }
 
-function showModal() {
+/**
+ * 
+ * @param String content
+ */
+function showModal(content) {
     $('#modal').modal().show();
+    $('#plcModalBody').html(content);
 }
+

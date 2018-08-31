@@ -38,7 +38,7 @@
                     {
                         var fa = (dataRow.Code === -1) ? 'fa-times-circle text-danger' : 'fa-check-circle text-primary';
                         var template = '<i class="fa ' + fa + '"></i>';
-                        template += '<a data-Code="' + dataRow.Code + '" data-ID="' + dataRow.ID + '"><i class="fa fa-arrow-circle-up text-primary"></i></a>';
+                        template += '<a class="showFormHfContact" data-Code="' + dataRow.Code + '" data-ID="' + dataRow.ID + '"><i class="fa fa-arrow-circle-up text-primary"></i></a>';
                         return template;
                     },
                     groupable:false,
@@ -54,6 +54,27 @@
 
         });
 
+    });
+
+    $(document).on('click', '.showFormHfContact', function () {
+        var id = $(this).attr('data-id');
+
+        $.get('Forms/FrmHfContact.php', function (data, status) {
+            showModal(data);
+        });
+        var token = getLocalToken().Token;
+        $.ajax({
+            url: apiBaseUrl + '?q=HfContact_Get',
+            data: { token: token, id: id },
+            method: 'POST',
+            success: function (data) {
+                var hfContact = JSON.parse(data);
+                for (var p in hfContact) {
+                    console.log(hfContact[p]);
+                    $('input[name=' + p + ']').val(hfContact[p]);
+                }
+            }
+        })
     });
 
 </script>
