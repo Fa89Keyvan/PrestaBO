@@ -35,6 +35,31 @@ class HfContactsStore
 
 	}
 
+    /**
+     * Select HfContact by ID
+     * @param $id int
+     * @return HfContactModel
+     */
+    public function Select($id)
+    {
+        try
+        {
+        	$sql = self::SELECT_ALL . ' WHERE C.id_customer = ? ';
+            $query = $this->db->prepare($sql);
+            $query->bind_param('i',$id);
+			$query->execute();
+			$result = $query->get_result();
+            $row = $result->fetch_object('HfContactModel');
+            return $row;
+        }
+        catch (Exception $exception)
+        {
+            throw $exception;
+        }
+
+    }
+
+
 	const SELECT_ALL = "SELECT
 		C.id_customer 			as ID,
         C.firstname				as `Name`,

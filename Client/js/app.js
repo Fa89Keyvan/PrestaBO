@@ -28,6 +28,7 @@ $(document).ajaxComplete(function (event, xhr, settings) {
     }
     
 });
+
 $(document).ajaxStart(function () {
     $('#loading').fadeIn('slow');
 })
@@ -55,6 +56,7 @@ $(document).on('click', '#btnMaximize', function () {
     $(this).addClass('hide');
     $('#btnRestore').removeClass('hide');
 });
+
 $(document).on('click', '#btnRestore', function () {
     var sideNav = document.getElementById('sideNav')    ;
     var wrapper = document.getElementById('wrapper');
@@ -188,4 +190,8 @@ function buildSideBar(token) {
         html += '</li>';
     }
     $('#sideNav').html(html);
+}
+
+function showModal() {
+    $('#modal').modal().show();
 }

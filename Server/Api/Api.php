@@ -32,6 +32,9 @@ else{
                 case 'HfContacts_GetAll': 
                     HfContactApi::GetAll(); 
                     break;
+                case 'HfContact_Get':
+                    HfContactApi::Get();
+                    break;
                 default: 
                     http_response_code(404);                 
                     break;

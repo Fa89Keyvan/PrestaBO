@@ -19,7 +19,8 @@
                     }
                 },
                 batch: true,
-                pageSize: 10
+                pageSize: 10,
+                
             },
             pageable: { pageSizes: [10, 20, 50, 200, 1000] },
             scrollable: true,
