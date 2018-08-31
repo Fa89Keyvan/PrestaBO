@@ -70,7 +70,7 @@
             success: function (data) {
                 var hfContact = JSON.parse(data);
                 for (var p in hfContact) {
-                    console.log(hfContact[p]);
+                    //console.log(hfContact[p]);
                     $('input[name=' + p + ']').val(hfContact[p]);
                 }
             }
