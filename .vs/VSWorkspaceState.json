@@ -3,8 +3,9 @@
     "",
     "\\Client",
     "\\Client\\Forms",
-    "\\Client\\js"
+    "\\Client\\js",
+    "\\Server\\Api",
+    "\\Server\\DAL"
   ],
-  "SelectedNode": "\\Client\\index.php",
   "PreviewInSolutionExplorer": false
 }

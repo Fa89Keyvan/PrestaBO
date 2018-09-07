@@ -2581,6 +2581,7 @@
     <Compile Include="Server\DAL\BaseStore.php" />
     <Compile Include="Server\DAL\EmployeeAccessStore.php" />
     <Compile Include="Server\DAL\EmployeeStore.php" />
+    <Compile Include="Server\DAL\HesabfaContactStore.php" />
     <Compile Include="Server\DAL\HfContactsStore.php" />
     <Compile Include="Server\DAL\URLStore.php" />
     <Compile Include="Server\DTO\BaseResponseDTO.php" />
@@ -2588,6 +2589,8 @@
     <Compile Include="Server\Models\EmployeeAccessModel.php" />
     <Compile Include="Server\Models\EmployeeAccessUrlModel.php" />
     <Compile Include="Server\Models\EmployeeModel.php" />
+    <Compile Include="Server\Models\HesabfaBaseRequest.php" />
+    <Compile Include="Server\Models\HesabfaBaseResponseModel.php" />
     <Compile Include="Server\Models\HfContactModel.php" />
     <Compile Include="Server\Models\TokenModel.php" />
     <Compile Include="Server\Models\URLModel.php" />
