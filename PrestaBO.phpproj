@@ -2577,10 +2577,12 @@
     <Compile Include="Client\SideBar.html" />
     <Compile Include="Server\Api\Api.php" />
     <Compile Include="Server\Api\EmployeeApi.php" />
+    <Compile Include="Server\Api\HesabfaApi.php" />
     <Compile Include="Server\Api\HfContactApi.php" />
     <Compile Include="Server\DAL\BaseStore.php" />
     <Compile Include="Server\DAL\EmployeeAccessStore.php" />
     <Compile Include="Server\DAL\EmployeeStore.php" />
+    <Compile Include="Server\DAL\HesabfaBaseStore.php" />
     <Compile Include="Server\DAL\HesabfaContactStore.php" />
     <Compile Include="Server\DAL\HfContactsStore.php" />
     <Compile Include="Server\DAL\URLStore.php" />
@@ -2589,8 +2591,12 @@
     <Compile Include="Server\Models\EmployeeAccessModel.php" />
     <Compile Include="Server\Models\EmployeeAccessUrlModel.php" />
     <Compile Include="Server\Models\EmployeeModel.php" />
-    <Compile Include="Server\Models\HesabfaBaseRequest.php" />
+    <Compile Include="Server\Models\HesabfaFilterModel.php" />
+    <Compile Include="Server\Models\HesabfaBaseRequestModel.php" />
     <Compile Include="Server\Models\HesabfaBaseResponseModel.php" />
+    <Compile Include="Server\Models\HesabfaGetListRequestModel.php" />
+    <Compile Include="Server\Models\HesabfaListResultModel.php" />
+    <Compile Include="Server\Models\HesabfaQueryInfoModel.php" />
     <Compile Include="Server\Models\HfContactModel.php" />
     <Compile Include="Server\Models\TokenModel.php" />
     <Compile Include="Server\Models\URLModel.php" />

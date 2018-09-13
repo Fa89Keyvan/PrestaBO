@@ -61,11 +61,39 @@ class Tools
         return json_encode($obj,JSON_UNESCAPED_UNICODE);
     }
 
+    public static function FromJson($jsonString){
+        return json_decode($jsonString,false,512,JSON_UNESCAPED_UNICODE);
+    }
+
     /**
      * @param $str string
      * @return bool
      */
     public static function IsNullOrEmpty($str){
         return ($str === null || $str === '');
+    }
+
+    /**
+     * Summary of PostAsJson
+     * @param string $url 
+     * @param mixed $obj 
+     * @return string jsonString
+     */
+    public static function PostAsJson($url,$obj){
+
+        $json_string = self::ToJson($obj);
+
+        $ch = curl_init($url);
+        curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $json_string);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json',
+            'Content-Length: ' . strlen($json_string))
+        );
+
+        $result = curl_exec($ch);
+        return $result;
     }
 }

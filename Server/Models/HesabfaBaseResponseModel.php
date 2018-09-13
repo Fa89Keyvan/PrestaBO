@@ -30,7 +30,7 @@ class HesabfaBaseResponseModel
 
     /**
      * Summary of $Result
-     * @var mixed
+     * @var HesabfaListResultModel
      */
     public $Result;
 }

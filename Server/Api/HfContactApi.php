@@ -2,9 +2,6 @@
 
 class HfContactApi
 {
-    /**
-     * @param $hfContactStore HfContactsStore
-     */
     public static function GetAll(){
 
         $hfContactStore = new HfContactsStore();
@@ -12,9 +9,6 @@ class HfContactApi
         echo Tools::ToJson($lstHfContacts);
     }
 
-    /**
-     * @param $hfContactStore HfContactsStore
-     */
     public static function Get(){
         $id = GetPostedValue('id');
         if($id === null)

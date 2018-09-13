@@ -1,11 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Client",
     "\\Client\\Forms",
     "\\Client\\js",
     "\\Server\\Api",
-    "\\Server\\DAL"
+    "\\Server\\Models"
   ],
   "PreviewInSolutionExplorer": false
 }

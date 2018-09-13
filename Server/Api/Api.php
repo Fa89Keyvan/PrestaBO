@@ -35,6 +35,9 @@ else{
                 case 'HfContact_Get':
                     HfContactApi::Get();
                     break;
+                case 'Hesabfa_Contact_Get':
+                    HesabfaApi::GetByMobile();
+                    break;
                 default: 
                     http_response_code(404);                 
                     break;
